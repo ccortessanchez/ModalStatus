@@ -16,6 +16,7 @@ public class ModalStatusView: UIView {
     
     let nibName = "ModalStatusView"
     var contentView: UIView!
+    var timer: Timer?
     
     //MARK: Set up view
     
@@ -41,6 +42,20 @@ public class ModalStatusView: UIView {
         
         headlineLabel.text = ""
         subheadLabel.text = ""
+    }
+    
+    public override func didMoveToSuperview() {
+        // Add a timer to remove the view
+        self.timer = Timer.scheduledTimer(
+            timeInterval: TimeInterval(3.0),
+            target: self,
+            selector: #selector(self.removeSelf),
+            userInfo: nil,
+            repeats: false)
+    }
+    
+    @objc private func removeSelf() {
+        self.removeFromSuperview()
     }
     
     // Provide functions to update view
