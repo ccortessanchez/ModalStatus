@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A14F4EF1FC6CD2D00FA3D75 /* ModalStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A14F4ED1FC6CD2D00FA3D75 /* ModalStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A14F4F61FC6CE0D00FA3D75 /* ModalStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A14F4F51FC6CE0D00FA3D75 /* ModalStatusView.xib */; };
+		0A14F4F81FC6D1A400FA3D75 /* ModalStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A14F4F71FC6D1A400FA3D75 /* ModalStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		0A14F4ED1FC6CD2D00FA3D75 /* ModalStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalStatus.h; sourceTree = "<group>"; };
 		0A14F4EE1FC6CD2D00FA3D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A14F4F51FC6CE0D00FA3D75 /* ModalStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalStatusView.xib; sourceTree = "<group>"; };
+		0A14F4F71FC6D1A400FA3D75 /* ModalStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +50,10 @@
 		0A14F4EC1FC6CD2D00FA3D75 /* ModalStatus */ = {
 			isa = PBXGroup;
 			children = (
-				0A14F4F51FC6CE0D00FA3D75 /* ModalStatusView.xib */,
 				0A14F4ED1FC6CD2D00FA3D75 /* ModalStatus.h */,
 				0A14F4EE1FC6CD2D00FA3D75 /* Info.plist */,
+				0A14F4F51FC6CE0D00FA3D75 /* ModalStatusView.xib */,
+				0A14F4F71FC6D1A400FA3D75 /* ModalStatusView.swift */,
 			);
 			path = ModalStatus;
 			sourceTree = "<group>";
@@ -98,6 +101,7 @@
 				TargetAttributes = {
 					0A14F4E91FC6CD2D00FA3D75 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A14F4F81FC6D1A400FA3D75 /* ModalStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +262,7 @@
 		0A14F4F31FC6CD2D00FA3D75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -270,6 +276,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmv.ModalStatus;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -278,6 +285,7 @@
 		0A14F4F41FC6CD2D00FA3D75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
